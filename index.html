@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suntech</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header>
+          <div class="overlay__header"></div>
+          <h1 class="header__items header__logo">
+            <a href="#"
+              ><img src="./assets/images/header/logo.png" alt="logo"
+            /></a>
+          </h1>
+          <div class="header__items header__box">
+            <ul class="header__nav">
+              <li class="header__nav__item"><a href="#!">Home</a></li>
+              <li class="header__nav__item"><a href="#!">Women</a></li>
+              <li class="header__nav__item"><a href="#!">Men</a></li>
+              <li class="header__nav__item"><a href="#!">Kids</a></li>
+              <li class="header__nav__item"><a href="#!">Jewellery</a></li>
+              <li class="header__nav__item"><a href="#!">accessories</a></li>
+            </ul>
+            <div class="header__nav__btn">
+              <div class="header__nav__btn__box">
+                <button
+                  class="suntech__btn suntech__btn--light"
+                  data-bs-toggle="modal"
+                  data-bs-target="#logIn"
+                >
+                  Log in</button
+                ><button
+                  class="suntech__btn suntech__btn--dark"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signUp"
+                >
+                  Sign up
+                </button>
+              </div>
+              <form action="" class="header__nav__btn__languages">
+                <label for="languages">Languages: </label>
+                <select name="languages" id="languages">
+                  <option value="eng" selected>English</option>
+                  <option value="vie">Tiếng Việt</option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <ul class="header__items header__function">
+            <li class="header__function__item header__function__cart">
+              <a href="#!"><i class="fa-solid fa-cart-shopping"></i></a>
+              <div class="cart__shopping">
+                <div class="cart__shopping__title">
+                  <h4>Sản Phẩm Mới Thêm</h4>
+                </div>
+                <div class="cart__shopping__product">
+                  <a href="#!" class="cart__shopping__product__item">
+                    <div class="cart__shopping__product__img">
+                      <img
+                        src="./assets/images/best_seller/model_man.jpg"
+                        alt="product"
+                      />
+                    </div>
+                    <h4 class="cart__shopping__product__name">
+                      Crown Summit Backpack
+                    </h4>
+                    <span class="cart__shopping__product__price">$250.00</span>
+                  </a>
+                  <a href="#!" class="cart__shopping__product__item">
+                    <div class="cart__shopping__product__img">
+                      <img
+                        src="./assets/images/best_seller/shoes.jpg"
+                        alt="product"
+                      />
+                    </div>
+                    <h4 class="cart__shopping__product__name">
+                      Cruise Dual Analog
+                    </h4>
+                    <span class="cart__shopping__product__price">$250.00</span>
+                  </a>
+                  <a href="#!" class="cart__shopping__product__item">
+                    <div class="cart__shopping__product__img">
+                      <img
+                        src="./assets/images/products/model_woman.jpg"
+                        alt="product"
+                      />
+                    </div>
+                    <h4 class="cart__shopping__product__name">
+                      Joust Duffle Bag
+                    </h4>
+                    <span class="cart__shopping__product__price">$250.00</span>
+                  </a>
+                </div>
+                <a
+                  href="#!"
+                  class="cart__shopping__btn suntech__btn suntech__btn--light"
+                >
+                  View my shopping cart
+                </a>
+              </div>
+            </li>
+            <li class="header__function__item">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </li>
+            <li class="header__function__item header__function__btn">
+              <button class="header__function__item__nav">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </li>
+          </ul>
+        </header>
+        <main>
+          <section class="slider">
+            <div class="slider__img">
+              <img src="./assets/images/slider/Slider.jpg" alt="banner" />
+            </div>
+            <h2 class="slider__heading">The Best <span>Woocommerce</span></h2>
+          </section>
+          <section class="seller">
+            <div class="seller__title">
+              <h2 class="seller__title__heading">BEST SELLERS</h2>
+              <p class="seller__title__note">The best productions from us</p>
+              <p class="seller__title__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos ab possimus architecto voluptatibus dicta culpa
+                suscipit a quos inventore. Ex.
+              </p>
+            </div>
+
+            <div class="product__item">
+              <a href="#!" class="product__item__box">
+                <div class="product__item__img">
+                  <img
+                    src="./assets/images/best_seller/shoes.jpg"
+                    alt="shoes"
+                  />
+                </div>
+                <div class="product__item__title">
+                  <h3>Cruise Dual Analog</h3>
+                  <span>$250.00</span>
+                </div>
+              </a>
+              <div class="product__icon--hover">
+                <button class="product__icon__btn product__icon__btn--cart">
+                  <span class="product__added"
+                    >1+ <i class="fa-solid fa-cart-shopping"></i
+                  ></span>
+                  <i class="fa-solid fa-cart-shopping"></i></button
+                ><button class="product__icon__btn product__icon__btn--heart">
+                  <i class="fa-solid fa-heart"></i></button
+                ><button class="product__icon__btn product__icon__btn--reload">
+                  <i class="fa-sharp fa-solid fa-retweet"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product__item">
+              <a href="#!" class="product__item__box">
+                <div class="product__item__img">
+                  <img
+                    src="./assets/images/best_seller/model_man.jpg"
+                    alt="man"
+                  />
+                </div>
+                <div class="product__item__title">
+                  <h3>Crown Summit Backpack</h3>
+                  <span>$250.00</span>
+                </div>
+              </a>
+              <div class="product__icon--hover">
+                <button class="product__icon__btn product__icon__btn--cart">
+                  <span class="product__added"
+                    >1+ <i class="fa-solid fa-cart-shopping"></i
+                  ></span>
+                  <i class="fa-solid fa-cart-shopping"></i></button
+                ><button class="product__icon__btn product__icon__btn--heart">
+                  <i class="fa-solid fa-heart"></i></button
+                ><button class="product__icon__btn product__icon__btn--reload">
+                  <i class="fa-sharp fa-solid fa-retweet"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product__item">
+              <a href="#!" class="product__item__box">
+                <div class="product__item__img">
+                  <img
+                    src="./assets/images/best_seller/model_man.jpg"
+                    alt="man"
+                  />
+                </div>
+                <div class="product__item__title">
+                  <h3>Joust Duffle Bag</h3>
+                  <span>$250.00</span>
+                </div>
+              </a>
+              <div class="product__icon--hover">
+                <button class="product__icon__btn product__icon__btn--cart">
+                  <span class="product__added"
+                    >1+ <i class="fa-solid fa-cart-shopping"></i
+                  ></span>
+                  <i class="fa-solid fa-cart-shopping"></i></button
+                ><button class="product__icon__btn product__icon__btn--heart">
+                  <i class="fa-solid fa-heart"></i></button
+                ><button class="product__icon__btn product__icon__btn--reload">
+                  <i class="fa-sharp fa-solid fa-retweet"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product__item">
+              <a href="#!" class="product__item__box">
+                <div class="product__item__img">
+                  <img
+                    src="./assets/images/best_seller/model_man.jpg"
+                    alt="man"
+                  />
+                </div>
+                <div class="product__item__title">
+                  <h3>Voyage Yoga Bag</h3>
+                  <span>$250.00</span>
+                </div>
+              </a>
+              <div class="product__icon--hover">
+                <button class="product__icon__btn product__icon__btn--cart">
+                  <span class="product__added"
+                    >1+ <i class="fa-solid fa-cart-shopping"></i
+                  ></span>
+                  <i class="fa-solid fa-cart-shopping"></i></button
+                ><button class="product__icon__btn product__icon__btn--heart">
+                  <i class="fa-solid fa-heart"></i></button
+                ><button class="product__icon__btn product__icon__btn--reload">
+                  <i class="fa-sharp fa-solid fa-retweet"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="service">
+            <div class="service__box">
+              <div class="service__box__img">
+                <img src="./assets/images/statics/diamond.png" alt="icon" />
+              </div>
+              <h4>Special offers</h4>
+              <span>Shop Big Save Big</span>
+            </div>
+            <div class="service__box">
+              <div class="service__box__img">
+                <img src="./assets/images/statics/fly.png" alt="icon" />
+              </div>
+              <h4>Free delivery</h4>
+              <span>On Orders Above $99</span>
+            </div>
+            <div class="service__box">
+              <div class="service__box__img">
+                <img src="./assets/images/statics/loop.png" alt="icon" />
+              </div>
+              <h4>30 Days Return</h4>
+              <span>Policy We Offers</span>
+            </div>
+            <div class="service__box">
+              <div class="service__box__img">
+                <img src="./assets/images/statics/rocket.png" alt="icon" />
+              </div>
+              <h4>Fastest Shipping</h4>
+              <span>2 Days Express</span>
+            </div>
+          </section>
+
+          <section class="event">
+            <div class="event__item">
+              <img
+                src="./assets/images/categories/summer_autumn.png"
+                alt="event"
+              />
+            </div>
+            <div class="event__item">
+              <img
+                src="./assets/images/categories/fashion_for_ment.png"
+                alt="event"
+              />
+            </div>
+            <div class="event__item">
+              <img
+                src="./assets/images/categories/fashion_styles.png"
+                alt="event"
+              />
+            </div>
+          </section>
+
+          <section class="product">
+            <div class="product__heading">
+              <h2>Featured Products</h2>
+              <p>Newest trends from top brands</p>
+            </div>
+
+            <div class="product__list">
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product__item">
+                <a href="#!" class="product__item__box">
+                  <div class="product__item__img">
+                    <img
+                      src="./assets/images/products/model_woman.jpg"
+                      alt="model_woman"
+                    />
+                  </div>
+                  <div class="product__item__title">
+                    <h3>Joust Duffle Bag</h3>
+                    <span>$250.00</span>
+                  </div>
+                </a>
+                <div class="product__icon--hover">
+                  <button class="product__icon__btn product__icon__btn--cart">
+                    <span class="product__added"
+                      >1+ <i class="fa-solid fa-cart-shopping"></i
+                    ></span>
+                    <i class="fa-solid fa-cart-shopping"></i></button
+                  ><button class="product__icon__btn product__icon__btn--heart">
+                    <i class="fa-solid fa-heart"></i></button
+                  ><button
+                    class="product__icon__btn product__icon__btn--reload"
+                  >
+                    <i class="fa-sharp fa-solid fa-retweet"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="interact">
+            <div class="row g-0">
+              <div class="col col-12 col-lg-6">
+                <div class="subscribe">
+                  <h2 class="subscribe__heading">Get Out Special Discount</h2>
+                  <p class="subscribe__desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Placeat, unde velit quae debitis impedit laborum autem.
+                  </p>
+                  <form action="" class="subscribe__form">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="E-mail address ..."
+                      required
+                    />
+                    <button class="suntech__btn suntech__btn--light">
+                      get coupon now
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="col col-12 col-lg-6 d-flex align-items-center">
+                <div class="client">
+                  <div class="row row-cols-4 g-0">
+                    <div class="col d-flex align-items-center">
+                      <div class="client__item">
+                        <img
+                          src="./assets/images/subscribe/retrodesign.png"
+                          alt="client"
+                        />
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                      <div class="client__item">
+                        <img
+                          src="./assets/images/subscribe/restaurant.png"
+                          alt="client"
+                        />
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                      <div class="client__item">
+                        <img
+                          src="./assets/images/subscribe/oceandor.png"
+                          alt="client"
+                        />
+                      </div>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                      <div class="client__item">
+                        <img
+                          src="./assets/images/subscribe/design_studio.png"
+                          alt="client"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Modal box -->
+          <section class="modal__box">
+            <div
+              class="modal fade"
+              id="signUp"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="email" class="col-form-label"
+                          >Email:
+                        </label>
+                        <input
+                          required
+                          type="email"
+                          class="form-control"
+                          id="email"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="name" class="col-form-label"
+                          >User Name:
+                        </label>
+                        <input
+                          required
+                          type="text"
+                          class="form-control"
+                          id="name"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="col-form-label"
+                          >Password:
+                        </label>
+                        <input
+                          required
+                          type="password"
+                          class="form-control"
+                          id="password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="confirm" class="col-form-label"
+                          >Confirm Password:
+                        </label>
+                        <input
+                          required
+                          type="password"
+                          class="form-control"
+                          id="confirm"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-between">
+                    <button
+                      type="button"
+                      class="btn-secondary suntech__btn suntech__btn--light"
+                      data-bs-toggle="modal"
+                      data-bs-target="#logIn"
+                      data-bs-dismiss="modal"
+                    >
+                      Log In
+                    </button>
+                    <button
+                      type="button"
+                      class="suntech__btn suntech__btn--dark btn-primary"
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="logIn"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="name" class="col-form-label"
+                          >User Name:
+                        </label>
+                        <input
+                          required
+                          type="text"
+                          class="form-control"
+                          id="name"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="col-form-label"
+                          >Password:
+                        </label>
+                        <input
+                          required
+                          type="password"
+                          class="form-control"
+                          id="password"
+                        />
+                      </div>
+                      <div class="mb-3 remember-password">
+                        <input type="checkbox" name="remember" id="remember" />
+                        <label for="password" class="col-form-label"
+                          >Remember Password.
+                        </label>
+                      </div>
+                      <a href="#!" class="modal-forget">Forget Password?</a>
+                    </form>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-between">
+                    <button
+                      type="button"
+                      class="btn-secondary suntech__btn suntech__btn--dark"
+                      data-bs-toggle="modal"
+                      data-bs-target="#signUp"
+                      data-bs-dismiss="modal"
+                    >
+                      Sign Up
+                    </button>
+                    <button
+                      type="button"
+                      class="suntech__btn suntech__btn--light btn-primary"
+                    >
+                      Log In
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div class="row row-cols-1 row-cols-md-2 g-0">
+            <div class="col">
+              <div class="copyright">
+                <p>
+                  Copyright 2017 RenoshopBee all right reserved - Design by
+                  BeeStudios
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card__item">
+                  <img src="./assets/images/footer/visa.png" alt="card bank" />
+                </div>
+                <div class="card__item">
+                  <img
+                    src="./assets/images/footer/paypal.png"
+                    alt="card bank"
+                  />
+                </div>
+                <div class="card__item">
+                  <img
+                    src="./assets/images/footer/amazon.png"
+                    alt="card bank"
+                  />
+                </div>
+                <div class="card__item">
+                  <img
+                    src="./assets/images/footer/maestro.png"
+                    alt="card bank"
+                  />
+                </div>
+                <div class="card__item">
+                  <img src="./assets/images/footer/amex.png" alt="card bank" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <div class="overlay"></div>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

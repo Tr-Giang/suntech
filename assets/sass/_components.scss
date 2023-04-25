@@ -1,0 +1,150 @@
+.product__item {
+  position: relative;
+  width: 20%;
+  padding: 0 1.5rem;
+  &:hover .product__icon--hover {
+    display: flex;
+  }
+  .product__item__box {
+  }
+
+  .product__item__img {
+  }
+
+  .product__item__title {
+    margin-top: 2.2rem;
+    h3 {
+      color: $text-color-1;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    span {
+      font-size: 2rem;
+      font-family: "Times New Roman", Times, serif;
+      color: $main-color-1;
+    }
+  }
+  .product__icon--hover {
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+    display: none;
+    flex-direction: column;
+    .product__icon__btn {
+      padding: 8px 11px;
+      margin-bottom: 1rem;
+      border: none;
+      background-color: $main-color-1;
+      color: #fff;
+      &:hover {
+        opacity: 0.8;
+      }
+      .product__added {
+        display: none;
+        position: absolute;
+        top: -2.5rem;
+        right: 0;
+        align-items: center;
+        background-color: transparent;
+        color: $main-color-1;
+
+        i {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+.suntech__btn {
+  padding: 1rem 3rem !important;
+  margin-left: 1rem;
+  border: none;
+  color: #fff !important;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--light {
+    background-color: $main-color-1 !important;
+  }
+
+  &--dark {
+    background-color: $text-color-1 !important;
+  }
+}
+
+.open {
+  display: block !important;
+}
+
+.close {
+  display: none;
+}
+
+.liked {
+  color: rgb(193, 97, 97) !important;
+  background-color: transparent !important;
+}
+
+.added {
+  color: $main-color-1 !important;
+  background-color: transparent !important;
+}
+
+.reloaded {
+  animation: reload 0.25s linear forwards;
+}
+
+.add__product {
+  display: flex !important;
+
+  animation: addProduct 0.8s linear forwards;
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+    transform: scale(50%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+
+@keyframes hideOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes reload {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes addProduct {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+}

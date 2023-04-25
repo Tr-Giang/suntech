@@ -1,0 +1,462 @@
+body.modal-open {
+  overflow: auto !important;
+  padding-right: 0 !important;
+}
+#app {
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  .overlay {
+    content: "";
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    z-index: 98;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  @include flexbox;
+  justify-content: space-between;
+  height: 10rem;
+  padding: 0 6.8rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 11px -2px #909090;
+
+  .overlay__header {
+    content: "";
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    z-index: 98;
+  }
+  .header__items {
+    height: 100%;
+    margin-top: 4px;
+    a,
+    button {
+      height: 100%;
+      @include flexbox;
+
+      &:hover {
+        color: $main-color-1;
+      }
+    }
+  }
+  .header__logo {
+    z-index: 99;
+    img {
+      height: 2.5rem;
+    }
+  }
+
+  .header__box {
+    z-index: 99;
+    .header__nav {
+      @include flexbox;
+      height: 100%;
+      &__item {
+        height: 100%;
+
+        a {
+          color: $text-color-1;
+          font-size: 1.6rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          &:hover {
+            color: $main-color-1;
+          }
+        }
+      }
+      &__item:not(&__item:first-of-type) {
+        margin-left: 5rem;
+      }
+    }
+    .header__nav__btn {
+      position: absolute;
+      top: 101%;
+      right: 0;
+      width: 40rem !important;
+      z-index: 99;
+      width: 100%;
+      display: none;
+      padding: 2rem 0rem;
+      background-color: #fff;
+      box-shadow: 0px 4px 11px -2px #909090;
+
+      &__box {
+        display: flex;
+        justify-content: space-around;
+      }
+      &__languages {
+        @include flexbox;
+        justify-content: end;
+        padding: 1.5rem 3rem 0;
+        select {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .header__function {
+    @include flexbox;
+    z-index: 99;
+    &__item {
+      height: 100%;
+      position: relative;
+      a,
+      button {
+        padding: 0 1rem;
+        border: none;
+        background-color: #fff;
+        color: $text-color-1;
+      }
+    }
+
+    &__cart::after {
+      content: "3";
+      display: block;
+      position: absolute;
+      top: 2.5rem;
+      right: 0rem;
+      z-index: 10;
+      padding: 0 6px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      background-color: $main-color-1;
+      color: #fff;
+    }
+
+    &__cart:hover .cart__shopping {
+      display: block;
+      animation: showUp 0.25s linear;
+    }
+
+    .cart__shopping {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: -45px;
+      width: 40rem;
+      max-width: 80vw;
+      z-index: 99;
+      padding: 2rem 0;
+      background-color: #fff;
+      box-shadow: 0 0 12px 1px #ccc;
+      transform-origin: top right;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        width: 100%;
+        height: 2rem;
+        background-color: transparent;
+      }
+      .cart__shopping__title {
+        color: #999;
+        padding: 1rem 2rem;
+      }
+
+      .cart__shopping__product {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 1.5rem 0;
+        .cart__shopping__product__item {
+          @include flexbox;
+          justify-content: space-between;
+          padding: 1rem 2rem;
+          gap: 1rem;
+
+          &:hover {
+            background-color: #f1f1f1;
+          }
+        }
+
+        .cart__shopping__product__img {
+          width: 6rem;
+          height: 6rem;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+
+        .cart__shopping__product__name {
+          flex: 1;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .cart__shopping__product__price {
+        }
+      }
+
+      .cart__shopping__btn {
+        float: right;
+        margin-top: 2rem;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 10rem;
+}
+
+.slider {
+  position: relative;
+
+  &__heading {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $text-color-1;
+
+    span {
+      display: block;
+      color: $main-color-1;
+    }
+  }
+}
+
+.seller {
+  @include flexbox;
+  flex-wrap: wrap;
+  padding: 9.6rem 5.3rem;
+
+  .seller__title {
+    width: 20%;
+    padding: 0 1.5rem;
+    .seller__title__heading {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .seller__title__note {
+      color: $main-color-1;
+      font-size: 1.6rem;
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+    }
+
+    .seller__title__desc {
+      margin-top: 2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.service {
+  @include flexbox;
+  padding: 5rem 0;
+  background-color: #f5f6f9;
+  .service__box {
+    width: 25%;
+    @include flexbox;
+    justify-content: center;
+    flex-direction: column;
+    color: $text-color-1;
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 500;
+      font-family: "Times New Roman", Times, serif;
+      color: #999;
+    }
+
+    .service__box__img {
+      width: 4rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.event {
+  @include flexbox;
+  .event__item {
+  }
+}
+
+.product {
+  padding: 9.6rem 5.3rem;
+
+  .product__heading {
+    text-align: center;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $text-color-1;
+    }
+
+    p {
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-weight: 600;
+      color: $main-color-1;
+    }
+  }
+
+  .product__list {
+    @include flexbox;
+    flex-wrap: wrap;
+
+    .product__item {
+      margin: 7rem 0 1rem;
+    }
+  }
+}
+
+.interact {
+  .subscribe {
+    padding: 6rem 0;
+    background-image: url("../images/subscribe/bgr_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+
+    .subscribe__heading {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    .subscribe__desc {
+      padding: 1.5rem 22% 2rem;
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+
+    .subscribe__form {
+      input {
+        width: 40%;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .client {
+    width: 100%;
+    padding: 2rem 0;
+    .client__item {
+      width: 50%;
+      margin: 0 auto;
+      padding: 1.5rem 0;
+      align-items: center;
+    }
+  }
+}
+
+//Modal:
+
+.modal {
+  overflow-y: hidden;
+}
+.modal-content {
+  position: relative;
+  .modal-header {
+    .modal-title {
+      font-size: 2.4rem;
+      padding: 1rem 2rem;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+
+  .modal-body {
+    padding: 1.5rem 4rem;
+
+    input {
+      padding: 1rem 2rem;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .remember-password {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .modal-forget {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+
+  .modal-footer {
+    padding: 1rem 2rem 2rem;
+  }
+}
+
+// Footer:
+footer {
+  background-color: #000;
+  padding: 1.5rem 0;
+  .copyright {
+    text-align: center;
+    color: #999;
+    font-size: 1.4rem;
+
+    p {
+      padding: 0 2rem;
+    }
+  }
+
+  .card {
+    @include flexbox;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #000;
+    border: none;
+    border-radius: none;
+
+    .card__item {
+    }
+  }
+}
