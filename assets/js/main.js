@@ -13,7 +13,7 @@ const app = {
             if (sizeWidth < 992) {
                 navBox.classList.contains('open') ? navBox.classList.remove('open') : navBox.classList.add('open');
             } else {
-                navOther.classList.contains('open') ? navOther.classList.remove('open') : navOther.classList.add('open');
+                // navOther.classList.contains('open') ? navOther.classList.remove('open') : navOther.classList.add('open');
 
             }
 
@@ -82,7 +82,7 @@ const app = {
 
     selectLanguages: function () {
         const selectElement = document.querySelector('#languages');
-        
+
     },
 
 
